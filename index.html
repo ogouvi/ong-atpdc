@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATPDC - ONG - Association Togolaise pour la Promotion et le Développement Communautaire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#16a34a',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(30, 64, 175, 0.8), rgba(22, 163, 74, 0.8)), url('https://lh6.googleusercontent.com/EkBOmdDbDC8BER77FM41qTfwZJdWd0CRs6RC_y40riYDT6bmh-Qs7qMRyvgD4N8_J5PyZ1Vzjpdess1PAqxk_xc=w16383');
+            background-size: cover;
+            background-position: center;
+        }
+        .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .nav-link:hover {
+            color: #16a34a;
+        }
+        .mobile-menu {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="/images/logo.png" alt="ATPDC Logo" class="w-14 h-14 mr-3 object-contain">
+                <h1 class="text-xl font-bold text-primary">ATPDC <span class="text-secondary">Togo</span></h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#accueil" class="nav-link text-primary font-medium hover:text-secondary">Accueil</a>
+                <a href="#apropos" class="nav-link text-primary font-medium hover:text-secondary">A propos</a>
+                <a href="#activites" class="nav-link text-primary font-medium hover:text-secondary">Activités</a>
+                <a href="#documents" class="nav-link text-primary font-medium hover:text-secondary">Documents</a>
+                <a href="#partenaires" class="nav-link text-primary font-medium hover:text-secondary">Partenaires</a>
+                <a href="#administration" class="nav-link text-primary font-medium hover:text-secondary">Administration</a>
+            </nav>
+            
+            <button id="mobile-menu-button" class="md:hidden text-primary">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-white w-full py-4 px-4 shadow-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="#accueil" class="nav-link text-primary font-medium hover:text-secondary">Accueil</a>
+                <a href="#apropos" class="nav-link text-primary font-medium hover:text-secondary">A propos</a>
+                <a href="#activites" class="nav-link text-primary font-medium hover:text-secondary">Activités</a>
+                <a href="#documents" class="nav-link text-primary font-medium hover:text-secondary">Documents</a>
+                <a href="#partenaires" class="nav-link text-primary font-medium hover:text-secondary">Partenaires</a>
+                <a href="#administration" class="nav-link text-primary font-medium hover:text-secondary">Administration</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">ATPDC - ONG - Association Togolaise pour la Promotion et le Développement Communautaire</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Œuvrons ensemble pour un Togo meilleur à travers la santé, l'agriculture, l'éducation inclusive, l'environnement et l'entrepreneuriat.</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+                <a href="#activites" class="bg-secondary hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">Nos Activités</a>
+                <a href="#partenaires" class="bg-white hover:bg-gray-100 text-primary font-bold py-3 px-8 rounded-full transition duration-300">Devenir Partenaire</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="apropos" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">À Propos de l'ATPDC Togo</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Une ONG engagée pour le développement communautaire au Togo</p>
+                <div class="w-20 h-1 bg-secondary mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="space-y-8">
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h3 class="text-2xl font-bold text-primary mb-4">Qui sommes-nous ?</h3>
+                        <p class="text-gray-700">L'Association Togolaise pour la Promotion et le Développement Communautaire (ATPDC) est une ONG reconnue (N° 722/MPDAT/2013  délivré le 07 Janvier 2014) qui œuvre pour l'amélioration des conditions de vie des communautés vulnérables au Togo.</p>
+                    </div>
+
+                    <div class="bg-blue-50 rounded-lg p-6">
+                        <h3 class="text-2xl font-bold text-primary mb-4">Notre Vision</h3>
+                        <p class="text-gray-700">Un Togo où chaque communauté a accès aux services de base de qualité et où chaque individu peut réaliser son plein potentiel dans un environnement sain et durable.</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-green-50 rounded-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-heart text-primary mr-2"></i>
+                                <h4 class="font-bold text-primary">Solidarité</h4>
+                            </div>
+                            <p class="text-sm text-gray-600">Agir ensemble pour un impact durable</p>
+                        </div>
+                        <div class="bg-yellow-50 rounded-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-handshake text-primary mr-2"></i>
+                                <h4 class="font-bold text-primary">Intégrité</h4>
+                            </div>
+                            <p class="text-sm text-gray-600">Transparence et éthique dans nos actions</p>
+                        </div>
+                        <div class="bg-purple-50 rounded-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-users text-primary mr-2"></i>
+                                <h4 class="font-bold text-primary">Participation</h4>
+                            </div>
+                            <p class="text-sm text-gray-600">Impliquer les communautés locales</p>
+                        </div>
+                        <div class="bg-red-50 rounded-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-leaf text-primary mr-2"></i>
+                                <h4 class="font-bold text-primary">Environnement</h4>
+                            </div>
+                            <p class="text-sm text-gray-600">Préserver notre cadre de vie</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="relative w-full h-64 mb-6">
+                        <div class="slider3 absolute w-full h-full">
+                            <div class="slide">
+                                <img src="https://lh3.googleusercontent.com/8GHbXSPRZBj304NCRNkM-0Y8L2CtR5B3BN2M2TiCuitCRZwCfQKBh4YyTE2pfyCVwa5YQIL-hn5ALa595EU1O8Y=w16383" alt="ATPDC Togo Image 1" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                            </div>
+                            <div class="slide hidden">
+                                <img src="https://lh4.googleusercontent.com/2Fnm1KNPaZ2ijr2qxxG0E7jn03lOtQU7YS9RdlYUC5mWmjxFKOgTaeioikqimzv_g4Xp5wkdtuWofO4jNaYZtJw=w16383" alt="ATPDC Togo Image 2" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                            </div>
+                            <div class="slide hidden">
+                                <img src="https://lh4.googleusercontent.com/R-eF-0CoYfGbacnzAWucpHNSdzFQGk0jMfP8gZ7jh685J8JPSNIYYxy-1lPTUTHGulrI93iAykMQjeXFEFvQOfM=w16383" alt="ATPDC Togo Image 3" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                            </div>
+                            <div class="slide hidden">
+                                <img src="https://lh6.googleusercontent.com/dJZM6GzEYCZy7k_tPhCtyCGMj5dcjN995rsCt2TV7sJcfE7IVh4Q-9pjdyE_socfr9DyyBuyAzNeCP6C287jGc4=w16383" alt="ATPDC Togo Image 4" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            let currentSlide3 = 0;
+                            const slides3 = document.querySelector('.slider3').getElementsByClassName('slide');
+                            
+                            function showSlide3(n) {
+                                // Hide all slides
+                                for(let slide of slides3) {
+                                    slide.classList.add('hidden');
+                                }
+                                // Show the current slide
+                                slides3[n].classList.remove('hidden');
+                            }
+                            
+                            function nextSlide3() {
+                                currentSlide3 = (currentSlide3 + 1) % slides3.length;
+                                showSlide3(currentSlide3);
+                            }
+                            
+                            // Show first slide
+                            showSlide3(0);
+                            
+                            // Start auto-sliding
+                            setInterval(nextSlide3, 3000);
+                        });
+                    </script>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-md">
+                        <h3 class="text-2xl font-bold text-primary mb-4">Nos Axes d'Intervention</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                                <p class="text-gray-700">Promotion de l'accès aux soins de santé de qualité</p>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                                <p class="text-gray-700">Éducation inclusive pour un développement durable</p>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                                <p class="text-gray-700">Protection de l'environnement</p>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                                <p class="text-gray-700">Lutte contre l'exode rural</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-primary bg-opacity-10 rounded-lg p-6">
+                        <h3 class="text-2xl font-bold text-primary mb-4">Notre Approche</h3>
+                        <div class="space-y-3">
+                            <p class="text-gray-700"><span class="font-semibold">Formation :</span> Ateliers et séminaires de renforcement des capacités</p>
+                            <p class="text-gray-700"><span class="font-semibold">Recherche-action :</span> Échanges d'expériences et débats publics</p>
+                            <p class="text-gray-700"><span class="font-semibold">Administration :</span> Capitalisation des informations et valorisation des ressources</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activites" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">Nos Domaines d'Intervention</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Découvrez nos principales activités et projets dans les différents secteurs d'intervention</p>
+                <div class="w-20 h-1 bg-secondary mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Health Section -->
+                <div class="bg-white rounded-lg p-8 shadow-md">
+                    <h3 class="text-2xl font-bold text-primary mb-4">Le 04 novembre 2022 : Atelier d'auto-évaluation à mis parcours du projet "Protection des berges de la rivière Anié"</h3>
+                    <p class="text-gray-600 mb-6">Le vendredi le 04 novembre 2022 l'ONG ATPDC dans le cadre du projet "Protection des berges de la rivière Anié" a organisé un atelier d'auto-évaluation à mis parcours.
+
+                        L'atelier s'est déroulé dzns la salle de conférence de la préecture d'Anié. Cet atelier a connu la participation des parties prenantes telles que:
+                        
+                        La préfecture,
+                        
+                        la Mairie Anié 1,
+                        
+                        Directeur Régional de l’Environnement et des Ressources Forestières,
+                        
+                        Directeur Préfectoral de l’Environnement et des Ressources Forestières,
+                        
+                        DP/ICAT,
+                        
+                        DP/DRAEP,
+                        
+                        Chefferie traditionnelle,
+                        
+                        Représentant des ONG et Associations de développement,
+                        
+                        CDQ,
+                        
+                        Représentant de jeunes,
+                        
+                        Représentante des femmes,
+                        
+                        Représentant des bénéficiaires directs.
+                        
+                        Le PCA de l'ONG et le staff.</p>
+                  
+                </div>
+                <div class="relative h-96">
+                    <div id="slider1" class="h-full">
+                        <div class="slide-container h-full relative">
+                            <img src="https://lh5.googleusercontent.com/MXNWUKR8U6qYRmeRl62mTDFWB2WDe_TVuW203Nk4YDVaYcogNAGTL1dPFrsmr5cCrCuq4IVKJFEBUuPv1W5eMX4=w16383" alt="Campagne de vaccination" class="w-full h-full object-cover rounded-lg absolute">
+                            <img src="https://lh6.googleusercontent.com/bhHX_1dqlCX0FMkpN4MAR052R0M10bZDKx0eNuAjB3OV6NQUeGXuJcEyQimSP88o2EIRnnC6XlCqeumZ0g9fQBM=w16383" alt="Consultation médicale" class="w-full h-full object-cover rounded-lg absolute hidden">
+                            <img src="https://lh4.googleusercontent.com/rAKAyxXhU9UlVj0QWT54JsGmBJdz35rYDbAetpWvQH3pp6n40lZoQkr_NZkqnR-feWVnW-Yo0oMQAfPBdw083XI=w16383" alt="Formation agents de santé" class="w-full h-full object-cover rounded-lg absolute hidden">
+                        </div>
+                        <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+                            <div class="w-3 h-3 rounded-full bg-white opacity-50 cursor-pointer slide-indicator"></div>
+                            <div class="w-3 h-3 rounded-full bg-white opacity-50 cursor-pointer slide-indicator"></div>
+                            <div class="w-3 h-3 rounded-full bg-white opacity-50 cursor-pointer slide-indicator"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agriculture Section -->
+                <div class="bg-white rounded-lg p-8 shadow-md">
+                    <h3 class="text-2xl font-bold text-primary mb-4">Le 20 octobre 2022 : l'animation d'une discutions de couple au sein de la communauté d'Agbo-fon dans la commune d'Ogou</h3>
+                    <p class="text-gray-600 mb-6">En ce jour 20 octobre 2022, l'ONG ATPDC et ses partenaires Jpiego ont effectué une mission de suivi de l'animation d'une discutions de couple au sein de la communauté d'Agbo-fon dans la commune d'Ogou1.
+
+                        L'équipe de la mission est composée de : La Directrice de Jpiego, le Chargé de programme, la Gestionnaire-comptable, le Directeur régional de la planification, madame le point focal de la planification familiale Ogou, Directeur Exécutif de l'ONG ATPDC et l'Assistant Technique Ogou 1.
+                        
+                        Le thème de la discussion est: Engagement des hommes en faveur la planification familiale.</p>
+                    
+                </div>
+                <div class="relative h-96">
+                    <div id="slider2" class="h-full">
+                        <div class="slide-container h-full relative">
+                            <img src="https://lh4.googleusercontent.com/a7wWexX2DssZ03GKsvARBiZ2cpr2j-mcgRzaflYq-UGepWhRMgYMtFtA2ua2zcCgBOpKvziW974YHQ_BP4JHsVk=w16383" alt="Formation agricole" class="w-full h-full object-cover rounded-lg absolute">
+                            <img src="https://lh5.googleusercontent.com/DB8tg67krQisaA-8p2nCLkv6F-HscffHGXgNi7m-KwdWS-suNvQcn7f6LcYybv43-c8V6A8rLE7jiDCCyaTC4I4=w16383" alt="Culture maraîchère" class="w-full h-full object-cover rounded-lg absolute hidden">
+                            <img src="https://lh6.googleusercontent.com/9ExLLPVQFCj2ibidFFNY4jFuuWKPuV6YoaQwyqHuKdgjvhFUOqzx65FOjHSbutD2AGDDOMAW2Qy_qjR5qk10tKU=w16383" alt="Distribution semences" class="w-full h-full object-cover rounded-lg absolute hidden">
+                        </div>
+                        <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+                            <div class="w-3 h-3 rounded-full bg-white opacity-50 cursor-pointer slide-indicator"></div>
+                            <div class="w-3 h-3 rounded-full bg-white opacity-50 cursor-pointer slide-indicator"></div>
+                            <div class="w-3 h-3 rounded-full bg-white opacity-50 cursor-pointer slide-indicator"></div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        function initializeSlider(sliderId) {
+                            const slider = document.getElementById(sliderId);
+                            const slides = slider.querySelectorAll('img');
+                            const indicators = slider.querySelectorAll('.slide-indicator');
+                            let currentSlide = 0;
+
+                            // Initialize first slide and indicator
+                            slides[0].classList.remove('hidden');
+                            indicators[0].classList.add('opacity-100');
+
+                            function showSlide(index) {
+                                // Hide all slides
+                                slides.forEach(slide => slide.classList.add('hidden'));
+                                indicators.forEach(indicator => indicator.classList.remove('opacity-100'));
+
+                                // Show current slide
+                                slides[index].classList.remove('hidden');
+                                indicators[index].classList.add('opacity-100');
+                            }
+
+                            function nextSlide() {
+                                currentSlide = (currentSlide + 1) % slides.length;
+                                showSlide(currentSlide);
+                            }
+
+                            // Add click events to indicators
+                            indicators.forEach((indicator, index) => {
+                                indicator.addEventListener('click', () => {
+                                    currentSlide = index;
+                                    showSlide(currentSlide);
+                                });
+                            });
+
+                            // Start auto-sliding
+                            setInterval(nextSlide, 3000);
+                        }
+
+                        // Initialize both sliders
+                        initializeSlider('slider1');
+                        initializeSlider('slider2');
+                    });
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents Section -->
+    <section id="documents" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">Documents et Publications</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Accédez à nos rapports d'activités, publications et documents officiels</p>
+                <div class="w-20 h-1 bg-secondary mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition duration-300">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-file-alt text-2xl text-primary"></i>
+                    </div> 
+                    <h3 class="text-xl font-bold text-primary mb-2">Rapport synthèse du projet</h3>
+                    <p class="text-gray-600 mb-4">Découvrez nos réalisations et impacts pour l'année 2022.</p>
+                    <a href="https://drive.google.com/file/d/1rH6okEGgh4UhMFvE_EkuA15_zie2iQw7/view?usp=sharing" class="text-secondary font-medium flex items-center">
+                        Télécharger <i class="fas fa-download ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition duration-300">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-book text-2xl text-secondary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2">Guide des Bonnes Pratiques</h3>
+                    <p class="text-gray-600 mb-4">Notre guide des bonnes pratiques agricoles durables.</p>
+                    <a href="#" class="text-secondary font-medium flex items-center">
+                        Télécharger <i class="fas fa-download ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition duration-300">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2">Étude d'Impact 2021</h3>
+                    <p class="text-gray-600 mb-4">Évaluation de l'impact de nos projets sur les communautés.</p>
+                    <a href="#" class="text-secondary font-medium flex items-center">
+                        Télécharger <i class="fas fa-download ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-primary hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    Voir tous les documents <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partenaires" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">Nos Partenaires</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Nous travaillons avec divers partenaires pour maximiser notre impact</p>
+                <div class="w-20 h-1 bg-secondary mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center h-32">
+                    <img src="https://via.placeholder.com/150x80?text=Partenaire+1" alt="Partenaire 1" class="max-h-16">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center h-32">
+                    <img src="https://via.placeholder.com/150x80?text=Partenaire+2" alt="Partenaire 2" class="max-h-16">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center h-32">
+                    <img src="https://via.placeholder.com/150x80?text=Partenaire+3" alt="Partenaire 3" class="max-h-16">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center h-32">
+                    <img src="https://via.placeholder.com/150x80?text=Partenaire+4" alt="Partenaire 4" class="max-h-16">
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-gradient-to-r from-primary to-secondary rounded-xl p-8 text-white">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h3 class="text-2xl font-bold mb-4">Devenir Partenaire</h3>
+                    <p class="mb-6">Rejoignez-nous dans notre mission pour un développement communautaire durable au Togo. Ensemble, nous pouvons créer un impact plus grand.</p>
+                    <a href="#" class="inline-block bg-white hover:bg-gray-100 text-primary font-bold py-3 px-8 rounded-full transition duration-300">
+                        Contactez-nous <i class="fas fa-envelope ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Administration Section -->
+    <section id="administration" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">Notre Équipe</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Découvrez les personnes qui font vivre l'ATPDC Togo au quotidien</p>
+                <div class="w-20 h-1 bg-secondary mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
+                    <div class="h-64 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-user-tie text-6xl text-primary"></i>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-primary mb-1">NOM ET PRENOM</h3>
+                        <p class="text-secondary font-medium mb-4">POSITION</p>
+                        <p class="text-gray-600">BIOGRAPHIE.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
+                    <div class="h-64 bg-green-100 flex items-center justify-center">
+                        <i class="fas fa-user-md text-6xl text-secondary"></i>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-primary mb-1">NOM ET PRENOM</h3>
+                        <p class="text-secondary font-medium mb-4">POSITION</p>
+                        <p class="text-gray-600">BIOGRAPHIE.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
+                    <div class="h-64 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-chalkboard-teacher text-6xl text-primary"></i>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-primary mb-1">NOM ET PRENOM</h3>
+                        <p class="text-secondary font-medium mb-4">POSITION</p>
+                        <p class="text-gray-600">BIOGRAPHIE.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-gray-50 rounded-lg p-8 border border-gray-200">
+                <h3 class="text-2xl font-bold text-primary mb-4 text-center">Rejoindre Notre Équipe</h3>
+                <p class="text-gray-600 mb-6 text-center max-w-2xl mx-auto">Nous recherchons constamment des talents engagés pour renforcer notre équipe. Consultez nos offres d'emploi et postulez.</p>
+                <div class="text-center">
+                    <a href="#" class="inline-block bg-primary hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                        Voir les offres <i class="fas fa-briefcase ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-gradient-to-r from-primary to-secondary text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Contactez-nous</h2>
+                <p class="max-w-2xl mx-auto">Nous sommes à votre disposition pour toute information ou collaboration</p>
+                <div class="w-20 h-1 bg-white mx-auto mt-4"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Nos Coordonnées</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt mt-1 mr-4"></i>
+                                <p>Siège social : Agbonou-Campement/Atakpamé (Derrière Hôtel Sahélien) 201 BP : 52, Agbonou Atakpamé, Plateaux Region, Togo </p>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-phone-alt mt-1 mr-4"></i>
+                                <p> (+228) 92 24 00 06 / 90 16 86 08</p>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope mt-1 mr-4"></i>
+                                <p>atoprodec@gmail.com / association.atpdc05@gmail.com</p>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-clock mt-1 mr-4"></i>
+                                <p>Lundi - Vendredi: 8h00 - 17h00</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="text-xl font-bold mb-4">Suivez-nous</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Envoyez-nous un message</h3>
+                        <form>
+                            <div class="mb-4">
+                                <input type="text" placeholder="Votre nom" class="w-full bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg py-3 px-4 placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-white">
+                            </div>
+                            <div class="mb-4">
+                                <input type="email" placeholder="Votre email" class="w-full bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg py-3 px-4 placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-white">
+                            </div>
+                            <div class="mb-4">
+                                <input type="text" placeholder="Sujet" class="w-full bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg py-3 px-4 placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-white">
+                            </div>
+                            <div class="mb-4">
+                                <textarea rows="4" placeholder="Votre message" class="w-full bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg py-3 px-4 placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-white"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-white text-primary font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition duration-300">
+                                Envoyer <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="/images/logo.png" alt="ATPDC Logo" class="w-12 h-12 mr-3 object-contain">
+                        <h3 class="text-xl font-bold">ATPDC <span class="text-secondary">Togo</span></h3>
+                    </div>
+                    <p class="text-gray-400">Association pour le Développement Communautaire au Togo. Œuvrons ensemble pour un Togo meilleur.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Liens Rapides</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#accueil" class="text-gray-400 hover:text-white transition duration-300">Accueil</a></li>
+                        <li><a href="#apropos" class="text-gray-400 hover:text-white transition duration-300">A propos</a></li>
+                        <li><a href="#activites" class="text-gray-400 hover:text-white transition duration-300">Activités</a></li>
+                        <li><a href="#documents" class="text-gray-400 hover:text-white transition duration-300">Documents</a></li>
+                        <li><a href="#partenaires" class="text-gray-400 hover:text-white transition duration-300">Partenaires</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Nos Programmes</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Santé Communautaire</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Agriculture Durable</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Éducation Inclusive</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Protection Environnement</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Entrepreneuriat Jeune</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Abonnez-vous à notre newsletter pour recevoir nos actualités.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Votre email" class="bg-gray-800 text-white py-2 px-4 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-primary w-full">
+                        <button type="submit" class="bg-primary hover:bg-blue-700 text-white py-2 px-4 rounded-r-lg transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 ATPDC Togo. Tous droits réservés.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Mentions légales</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Politique de confidentialité</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Conditions d'utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
