@@ -73,15 +73,87 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="accueil" class="hero-bg text-white py-20 md:py-32">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">ATPDC - ONG - Association Togolaise pour la Promotion et le Développement Communautaire</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Œuvrons ensemble pour un Togo meilleur à travers la santé, l'agriculture, l'éducation inclusive, l'environnement et l'entrepreneuriat.</p>
-            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
-                <a href="#activites" class="bg-secondary hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">Nos Activités</a>
-                <a href="#partenaires" class="bg-white hover:bg-gray-100 text-primary font-bold py-3 px-8 rounded-full transition duration-300">Devenir Partenaire</a>
+    <section id="accueil" class="relative w-full h-screen">
+        <div class="slider3 absolute w-full h-full">
+            <div class="slide">
+                <img src="/1.jpeg" alt="ATPDC Togo Image 1" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <div class="container mx-auto px-4 text-center text-white">
+                        <h1 class="text-4xl md:text-6xl font-bold mb-6">ATPDC - ONG - Association Togolaise pour la Promotion et le Développement Communautaire</h1>
+                        <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Œuvrons ensemble pour un Togo meilleur à travers la santé, l'agriculture, l'éducation inclusive, l'environnement et l'entrepreneuriat.</p>
+                        <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+                            <a href="#activites" class="bg-secondary hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">Nos Activités</a>
+                            <a href="#partenaires" class="bg-white hover:bg-gray-100 text-primary font-bold py-3 px-8 rounded-full transition duration-300">Devenir Partenaire</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide hidden">
+                <img src="/2.jpeg" alt="ATPDC Togo Image 2" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <div class="container mx-auto px-4 text-center text-white">
+                        <h1 class="text-4xl md:text-6xl font-bold mb-6">Promotion de la Santé</h1>
+                        <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Améliorer l'accès aux soins de santé de qualité pour tous</p>
+                        <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+                            <a href="#activites" class="bg-secondary hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">Nos Activités</a>
+                            <a href="#partenaires" class="bg-white hover:bg-gray-100 text-primary font-bold py-3 px-8 rounded-full transition duration-300">Devenir Partenaire</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide hidden">
+                <img src="/5.jpeg" alt="ATPDC Togo Image 3" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <div class="container mx-auto px-4 text-center text-white">
+                        <h1 class="text-4xl md:text-6xl font-bold mb-6">Développement Agricole</h1>
+                        <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Soutenir l'agriculture durable et l'autonomie alimentaire</p>
+                        <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+                            <a href="#activites" class="bg-secondary hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">Nos Activités</a>
+                            <a href="#partenaires" class="bg-white hover:bg-gray-100 text-primary font-bold py-3 px-8 rounded-full transition duration-300">Devenir Partenaire</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide hidden">
+                <img src="/7.jpeg" alt="ATPDC Togo Image 4" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <div class="container mx-auto px-4 text-center text-white">
+                        <h1 class="text-4xl md:text-6xl font-bold mb-6">Éducation Inclusive</h1>
+                        <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Promouvoir l'accès à l'éducation pour tous</p>
+                        <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+                            <a href="#activites" class="bg-secondary hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">Nos Activités</a>
+                            <a href="#partenaires" class="bg-white hover:bg-gray-100 text-primary font-bold py-3 px-8 rounded-full transition duration-300">Devenir Partenaire</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let currentSlide3 = 0;
+                const slides3 = document.querySelector('.slider3').getElementsByClassName('slide');
+                
+                function showSlide3(n) {
+                    // Hide all slides
+                    for(let slide of slides3) {
+                        slide.classList.add('hidden');
+                    }
+                    // Show the current slide
+                    slides3[n].classList.remove('hidden');
+                }
+                
+                function nextSlide3() {
+                    currentSlide3 = (currentSlide3 + 1) % slides3.length;
+                    showSlide3(currentSlide3);
+                }
+                
+                // Show first slide
+                showSlide3(0);
+                
+                // Start auto-sliding
+                setInterval(nextSlide3, 3000);
+            });
+        </script>
     </section>
 
     <!-- About Section -->
@@ -169,48 +241,7 @@
                 </div>
 
                 <div class="space-y-8">
-                    <div class="relative w-full h-64 mb-6">
-                        <div class="slider3 absolute w-full h-full">
-                            <div class="slide">
-                                <img src="/1.jpeg" alt="ATPDC Togo Image 1" class="w-full h-64 object-cover rounded-lg shadow-lg">
-                            </div>
-                            <div class="slide hidden">
-                                <img src="/2.jpeg" alt="ATPDC Togo Image 2" class="w-full h-64 object-cover rounded-lg shadow-lg">
-                            </div>
-                            <div class="slide hidden">
-                                <img src="/5.jpeg" alt="ATPDC Togo Image 3" class="w-full h-64 object-cover rounded-lg shadow-lg">
-                            </div>
-                            <div class="slide hidden">
-                                <img src="/7.jpeg" alt="ATPDC Togo Image 4" class="w-full h-64 object-cover rounded-lg shadow-lg">
-                            </div>
-                        </div>
-                    </div>
-                    <script>
-                        document.addEventListener('DOMContentLoaded', function() {
-                            let currentSlide3 = 0;
-                            const slides3 = document.querySelector('.slider3').getElementsByClassName('slide');
-                            
-                            function showSlide3(n) {
-                                // Hide all slides
-                                for(let slide of slides3) {
-                                    slide.classList.add('hidden');
-                                }
-                                // Show the current slide
-                                slides3[n].classList.remove('hidden');
-                            }
-                            
-                            function nextSlide3() {
-                                currentSlide3 = (currentSlide3 + 1) % slides3.length;
-                                showSlide3(currentSlide3);
-                            }
-                            
-                            // Show first slide
-                            showSlide3(0);
-                            
-                            // Start auto-sliding
-                            setInterval(nextSlide3, 3000);
-                        });
-                    </script>
+                   
                     
                     <div class="bg-white rounded-lg p-6 shadow-md">
                         <h3 class="text-2xl font-bold text-primary mb-4">Nos Axes d'Intervention</h3>
@@ -336,7 +367,7 @@
                 </div>
 
                 <div class="bg-white rounded-lg p-8 shadow-md">
-                    <h3 class="text-2xl font-bold text-primary mb-4">L'animation d'une discutions de couple au sein de la communauté de Tohoun et c'est enviro</h3>
+                    <h3 class="text-2xl font-bold text-primary mb-4">L'animation d'une discutions de couple au sein de la communauté de Tohoun et ses environs</h3>
                     
                 </div>
                 <div class="relative h-96">
@@ -446,6 +477,16 @@
                         <i class="fas fa-file-pdf mr-2"></i>Lire le rapport <i class="fas fa-external-link-alt ml-2"></i>
                     </a>
                 </div>
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition duration-300">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-newspaper text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2">Revue de nos activites dans le domaine de la santé</h3>
+                    <p class="text-gray-600 mb-4">Consultez notre revue CMS pour l'année 2024.</p>
+                    <a href="Revue_CMS BON SECOURS 2024-1.pdf" class="text-secondary font-medium flex items-center" target="_blank">
+                        <i class="fas fa-file-pdf mr-2"></i>Lire la revue <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
             </div>
             
             <!-- <div class="text-center mt-12">
@@ -514,6 +555,7 @@
                         <h3 class="text-xl font-bold text-primary mb-1">ANAYO Mignouna </h3>
                         <p class="text-secondary font-medium mb-4">Directeur Executif</p>
                         <p class="text-gray-600">Sociologue de formation.</p>
+                        <p class="text-gray-600">Cel: +228 90 58 10 42.</p>
                     </div>
                 </div>
                 
@@ -525,6 +567,7 @@
                         <h3 class="text-xl font-bold text-primary mb-1">SOTON KOFFI Odilon</h3>
                         <p class="text-secondary font-medium mb-4">Comptable</p>
                         <p class="text-gray-600">Gestionnaire-comptable.</p>
+                        <p class="text-gray-600">Cel:+228 91 28 15 92.</p>
                     </div>
                 </div>
                 
@@ -536,6 +579,7 @@
                         <h3 class="text-xl font-bold text-primary mb-1">OURO-KOURA Djamila </h3>
                         <p class="text-secondary font-medium mb-4">Secretaire</p>
                         <p class="text-gray-600">BTS en Secrétariat bureautique.</p>
+                        <p class="text-gray-600">Cel:+228 90 13 67 64.</p>
                     </div>
                 </div>
                 <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
@@ -546,6 +590,7 @@
                         <h3 class="text-xl font-bold text-primary mb-1">ABDUS SAMII ESSO Abodji</h3>
                         <p class="text-secondary font-medium mb-4">Agent de suivi</p>
                         <p class="text-gray-600">Agent de SUIVI.</p>
+                        <p class="text-gray-600">Cel:+228 92 57 99 96.</p>
                     </div>
                 </div>
             </div>
@@ -597,13 +642,13 @@
                         <div class="mt-8">
                             <h4 class="text-xl font-bold mb-4">Suivez-nous</h4>
                             <div class="flex space-x-4">
-                                <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
+                                <a href="https://www.facebook.com/profile.php?id=100078884495812&_rdc=1&_rdr#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
                                 <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
                                     <i class="fab fa-twitter"></i>
                                 </a>
-                                <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
+                                <a href="https://tg.linkedin.com/in/ong-atpdc-baba8b250" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
                                 <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
